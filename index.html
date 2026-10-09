@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alphabet Pattern</title>
+</head>
+<body>
+
+    <h2>Alphabet Pattern</h2>
+    <button onclick="printPattern()">Run Program</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        function printPattern() {
+            let n = 65;
+            let output = "";
+
+            for (let row = 1; row <= 5; row++) {
+                for (let col = 0; col < row; col++) {
+                    output += String.fromCharCode(n) + " ";
+                }
+
+                output += "\n";
+                n = n + 1;
+            }
+
+            document.getElementById("output").textContent = output;
+        }
+    </script>
+
+</body>
+</html>
